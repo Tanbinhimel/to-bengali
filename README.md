@@ -47,5 +47,8 @@ console.log(bengaliNumber.bngValue); // output: ১০০
 
 **more description will be added later.*
 
+## Contributing
+If you find a bug or would like to contribute to the project, please check out the [contribution guidelines](CONTRIBUTION.md).
+
 ## License
 To Bengali is licensed under the [MIT license](LICENSE).
