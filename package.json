@@ -1,7 +1,7 @@
 {
   "name": "to-bengali",
   "version": "1.0.0",
-  "description": "",
+  "description": "A lightweight npm package to translate numbers and dates to Bengali language.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {

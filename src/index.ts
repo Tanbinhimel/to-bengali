@@ -1,3 +1,2 @@
-export const Greeter = (name: string) => `Hello ${name}`;
-
-console.log(Greeter('Ruhimel!'));
+export {BengaliNumber} from "./bengali-number";
+export {BengaliDate} from "./bengali-date";

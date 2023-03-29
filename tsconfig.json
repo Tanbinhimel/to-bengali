@@ -3,7 +3,10 @@
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
+    "rootDir": "./src",
     "outDir": "./lib",
+    "removeComments": true,
+    "noEmitOnError": true,
     "strict": true
   },
   "include": [
