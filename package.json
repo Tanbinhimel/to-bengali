@@ -17,7 +17,12 @@
     "type": "git",
     "url": "git+https://github.com/Tanbinhimel/to-bng.git"
   },
-  "keywords": [],
+  "keywords": [
+    "bengali",
+    "translate",
+    "numbers",
+    "dates"
+  ],
   "author": "Md. Tanbin Hossain Himel <thimel.1998@gmail.com>",
   "license": "MIT",
   "bugs": {
