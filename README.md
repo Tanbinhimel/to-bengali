@@ -16,7 +16,7 @@ npm i to-bengali
 
 ## Usage
 
-Bengali Translate exports two Class: *BengaliDate* and *BengaliNumber*.
+**To Bengali** exports two Class: **Bengali Date** and **Bengali Number**.
 
 ### Bengali Date
 To import Bengali Date class:
