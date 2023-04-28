@@ -115,15 +115,15 @@ export class BengaliDate {
         }
 
         if (pattern === 'time') {
-            return `${this.bngTimeName} ${this.bngHoursInTwelveHourFormat}:${this.bngMinutes}`;
+            return `${this.bngTimeName} ${this.bngHoursInTwelveHourFormat.padStart(2, '০')}:${this.bngMinutes.padStart(2, '০')}`;
         }
 
         if (pattern === 'date-time') {
-            return `${this.bngDate} ${this.bngMonth}, ${this.bngFullYear} ${this.bngTimeName} ${this.bngHoursInTwelveHourFormat}:${this.bngMinutes}`;
+            return `${this.bngDate} ${this.bngMonth}, ${this.bngFullYear} ${this.bngTimeName} ${this.bngHoursInTwelveHourFormat.padStart(2, '০')}:${this.bngMinutes.padStart(2, '০')}`;
         }
 
         if (pattern === 'date-day-time') {
-            return `${this.bngDate} ${this.bngMonth}, ${this.bngFullYear} ${this.bngFullDay} ${this.bngTimeName} ${this.bngHoursInTwelveHourFormat}:${this.bngMinutes}`;
+            return `${this.bngDate} ${this.bngMonth}, ${this.bngFullYear} ${this.bngFullDay} ${this.bngTimeName} ${this.bngHoursInTwelveHourFormat.padStart(2, '০')}:${this.bngMinutes.padStart(2, '০')}`;
         }
 
         pattern = pattern.replace(/YYYY/g, this.bngFullYear);
