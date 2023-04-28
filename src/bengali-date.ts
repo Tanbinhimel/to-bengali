@@ -46,7 +46,7 @@ export class BengaliDate {
     }
 
     get bngHoursInTwelveHourFormat() {
-        const hours = this.dateTime.getHours() === 12 ? 12 : this.dateTime.getHours() % 12;
+        const hours = this.dateTime.getHours() % 12 === 0 ? 12 : this.dateTime.getHours() % 12;
         return new BengaliNumber(hours).bngValue;
     }
 
@@ -83,10 +83,10 @@ export class BengaliDate {
     get bngDay() {
         const dayNumber = this.dateTime.getDay();
         if (dayNumber < 0) {
-            return null;
+            return '';
         }
         if (dayNumber > 6) {
-            return null;
+            return '';
         }
         return daysInBengali[dayNumber];
     }
@@ -94,11 +94,59 @@ export class BengaliDate {
     get bngFullDay() {
         const dayNumber = this.dateTime.getDay();
         if (dayNumber < 0) {
-            return null;
+            return '';
         }
         if (dayNumber > 6) {
-            return null;
+            return '';
         }
         return daysInBengali[dayNumber] + 'বার';
+    }
+
+    get engTimeName() {
+        if (this.dateTime.getHours() >= 12) {
+            return 'PM';
+        }
+        return 'AM';
+    }
+
+    format(pattern = 'date-time') {
+        if (pattern === 'date') {
+            return `${this.bngDate} ${this.bngMonth}, ${this.bngFullYear}`;
+        }
+
+        if (pattern === 'time') {
+            return `${this.bngTimeName} ${this.bngHoursInTwelveHourFormat.padStart(2, '০')}:${this.bngMinutes.padStart(2, '০')}`;
+        }
+
+        if (pattern === 'date-time') {
+            return `${this.bngDate} ${this.bngMonth}, ${this.bngFullYear} ${this.bngTimeName} ${this.bngHoursInTwelveHourFormat.padStart(2, '০')}:${this.bngMinutes.padStart(2, '০')}`;
+        }
+
+        if (pattern === 'date-day-time') {
+            return `${this.bngDate} ${this.bngMonth}, ${this.bngFullYear} ${this.bngFullDay} ${this.bngTimeName} ${this.bngHoursInTwelveHourFormat.padStart(2, '০')}:${this.bngMinutes.padStart(2, '০')}`;
+        }
+
+        pattern = pattern.replace(/YYYY/g, this.bngFullYear);
+        pattern = pattern.replace(/YY/g, this.bngYear);
+        pattern = pattern.replace(/MMMM/g, this.bngMonth);
+        pattern = pattern.replace(/MM/g, this.bngMonthInNumber.padStart(2, '০'));
+        pattern = pattern.replace(/M/g, this.bngMonthInNumber);
+        pattern = pattern.replace(/DD/g, this.bngDate.padStart(2, '০'));
+        pattern = pattern.replace(/D/g, this.bngDate);
+        pattern = pattern.replace(/dddd/g, this.bngFullDay);
+        pattern = pattern.replace(/dd/g, this.bngDay);
+        pattern = pattern.replace(/AAAA/g, this.bngTimeName);
+        pattern = pattern.replace(/AA/g, this.engTimeName);
+        pattern = pattern.replace(/aa/g, this.engTimeName.toLowerCase());
+        pattern = pattern.replace(/hh/g, this.bngHoursInTwelveHourFormat.padStart(2, '০'));
+        pattern = pattern.replace(/h/g, this.bngHoursInTwelveHourFormat);
+        pattern = pattern.replace(/HH/g, this.bngHours.padStart(2, '০'));
+        pattern = pattern.replace(/H/g, this.bngHours);
+        pattern = pattern.replace(/mm/g, this.bngMinutes.padStart(2, '০'));
+        pattern = pattern.replace(/m/g, this.bngMinutes);
+        pattern = pattern.replace(/ss/g, this.bngSeconds.padStart(2, '০'));
+        pattern = pattern.replace(/s/g, this.bngSeconds);
+
+        return pattern;
     }
 }
