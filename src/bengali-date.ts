@@ -46,7 +46,7 @@ export class BengaliDate {
     }
 
     get bngHoursInTwelveHourFormat() {
-        const hours = this.dateTime.getHours() === 12 ? 12 : this.dateTime.getHours() % 12;
+        const hours = this.dateTime.getHours() % 12 === 0 ? 12 : this.dateTime.getHours() % 12;
         return new BengaliNumber(hours).bngValue;
     }
 
