@@ -44,67 +44,67 @@ Properties:
 <tr>
     <td>bngDate</td>
     <td>string</td>
-    <td>Returns date in bengali.</td>
+    <td>Returns date in bengali</td>
 </tr>
 <tr>
     <td>bngMonthInNumber</td>
     <td>string</td>
-    <td>Returns month in number in bengali.</td>
+    <td>Returns month in number in bengali</td>
 </tr>
 <tr>
     <td>bngMonth</td>
     <td>string</td>
-    <td>Returns month in words in bengali.</td>
+    <td>Returns month in words in bengali</td>
 </tr>
 <tr>
     <td>bngFullYear</td>
     <td>string</td>
-    <td>Returns full years (4 digits) in bengali.</td>
+    <td>Returns full years (4 digits) in bengali</td>
 </tr>
 <tr>
     <td>bngYear</td>
     <td>string</td>
-    <td>Returns years (last 2 digits) in bengali.</td>
+    <td>Returns years (last 2 digits) in bengali</td>
 </tr>
 <tr>
     <td>bngHours</td>
     <td>string</td>
-    <td>Returns hours (24-hours format) in bengali.</td>
+    <td>Returns hours (24-hours format) in bengali</td>
 </tr>
 <tr>
     <td>bngHoursInTwelveHourFormat</td>
     <td>string</td>
-    <td>Returns hours (12-hours format) in bengali.</td>
+    <td>Returns hours (12-hours format) in bengali</td>
 </tr>
 <tr>
     <td>bngMinutes</td>
     <td>string</td>
-    <td>Returns minutes in bengali.</td>
+    <td>Returns minutes in bengali</td>
 </tr>
 <tr>
     <td>bngSeconds</td>
     <td>string</td>
-    <td>Returns seconds in bengali.</td>
+    <td>Returns seconds in bengali</td>
 </tr>
 <tr>
     <td>bngTimeName</td>
     <td>"ভোর" | "সকাল" | "দুপুর" | "বিকাল" | "সন্ধ্যা" | "রাত"</td>
-    <td>Returns time name in bengali.</td>
+    <td>Returns time name in bengali</td>
 </tr>
 <tr>
     <td>bngDay</td>
     <td>string</td>
-    <td>Returns day name in bengali (first 2 characters).</td>
+    <td>Returns day name in bengali (first 2 characters)</td>
 </tr>
 <tr>
     <td>bngFullDay</td>
     <td>string</td>
-   <td>Returns full day name in bengali (all characters).</td>
+   <td>Returns full day name in bengali (all characters)</td>
 </tr>
 <tr>
     <td>engTimeName</td>
     <td>"PM" | "AM"</td>
-    <td>Returns time name in english.</td>
+    <td>Returns time name in english</td>
 </tr>
 </table>
 
